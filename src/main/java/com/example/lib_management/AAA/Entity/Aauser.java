@@ -2,6 +2,8 @@ package com.example.lib_management.AAA.Entity;
 
 
 
+import com.example.lib_management.AAA.model.UserinfoDTO;
+
 import javax.persistence.*;
 @NamedQueries({
         @NamedQuery(name = "Aauser.findAll", query = "select e from Aauser e ")
@@ -29,10 +31,18 @@ public class Aauser {
     private String mobile;
 
 
+
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "roleid")
     private Aarole aarole;
 
+    public Aauser(UserinfoDTO userinfoDTO){
+       // this.id= userinfoDTO.getCode();
+        this.username= userinfoDTO.getUsername();
+        this.email= userinfoDTO.getEmail();
+        this.mobile= userinfoDTO.getMobile_number();
+    }
+    public Aauser(){}
 
     public Aarole getAarole() {
         return aarole;

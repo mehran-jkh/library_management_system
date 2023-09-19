@@ -14,6 +14,11 @@
 
 <a href="/pagecontroller/viewallroles"> view_all_page</a> <br>
 
-<a href="/accesslistcontroller/viewallaccesslists">view_all_accesslists</a>
+<a href="/accesslistcontroller/viewallaccesslists">view_all_accesslists</a> <br>
+
+<a href="/usercontroller/viewallusers">view_all_users</a> <br>
+
+
+
 </body>
 </html>

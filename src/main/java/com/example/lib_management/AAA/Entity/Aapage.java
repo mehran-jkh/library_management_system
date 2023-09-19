@@ -16,6 +16,7 @@ public class Aapage {
     private String name;
     private String pagename;
     private String url;
+
     public Aapage(PageinfoDTO pageinfoDTO){
         this.setUrl(pageinfoDTO.getUrl());
         this.name=pageinfoDTO.getName();

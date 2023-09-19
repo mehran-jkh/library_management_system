@@ -52,12 +52,10 @@ public class Accesslistservice_controller {
         if(role_id==null)
         {
             accesslistDTO.setPages_id(load_accesslist(roleslist.get(0).getCode()));
-
         }
         else
         {
             accesslistDTO.setPages_id(load_accesslist(role_id));
-
         }
         return "view_all_accesslists";
     }
