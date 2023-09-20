@@ -28,7 +28,7 @@ public class Aarole {
     @OneToMany(mappedBy = "aarole", cascade = CascadeType.ALL)
     private List<Aauser> aausers;
 
-    @OneToMany(mappedBy = "aarole", cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "aarole", cascade = CascadeType.ALL)
     private List<Aaaccesslist> aaaccesslists;
 
 
