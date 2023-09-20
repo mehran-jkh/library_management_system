@@ -4,6 +4,14 @@ package com.example.lib_management.AAA.Entity;
 import javax.persistence.*;
 
 @Entity
+@NamedQueries(
+        {
+        @NamedQuery(name = "Aaaccesslist.findAll", query = "SELECT a FROM Aaaccesslist a")
+        ,
+        @NamedQuery(name = "Aaaccesslist.findRoleAccessList", query = "SELECT a FROM Aaaccesslist a WHERE a.aarole.id=:RoleId "),
+        }
+)
+
 public class Aaaccesslist {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

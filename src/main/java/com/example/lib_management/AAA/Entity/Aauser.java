@@ -11,6 +11,8 @@ import javax.persistence.*;
         @NamedQuery(name = "Aauser.findbyUsername", query = "select e from Aauser e where (e.username=:user_name)")
         ,
         @NamedQuery(name = "Aauser.findbyPassword", query = "select e from Aauser e where (e.password=:pass_word)")
+        ,
+        @NamedQuery(name = "Aauser.findbyUserPass", query = "select e from Aauser e where (e.username=:user_name and e.password=:pass_word)")
 })
 
 

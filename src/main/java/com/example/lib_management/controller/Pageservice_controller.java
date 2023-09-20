@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.http.HttpSession;
+
 @Controller
 @RequestMapping("pagecontroller")
 public class Pageservice_controller {
@@ -25,7 +27,7 @@ public class Pageservice_controller {
     }
     /////////////////////////////////////////////////////////////////// view all role
     @RequestMapping("viewallroles")
-    public String pages_info_page(Model model){
+    public String pages_info_page(Model model, HttpSession httpSessionn){
         model.addAttribute("page_list_key",pageWebService.return_all_pages());
         return "view_all_pages";
     }
