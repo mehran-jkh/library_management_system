@@ -32,7 +32,7 @@ public class UserServiceImpl extends BaseUCServiceImpl<Aauser> implements UserWe
 
         if(users.size()>0)
         {
-            throw new mException("this user_name has been taken previously! please use another user_name");
+            throw new mException();
         }
 
 

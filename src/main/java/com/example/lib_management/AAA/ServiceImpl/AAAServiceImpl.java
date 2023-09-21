@@ -52,5 +52,6 @@ public class AAAServiceImpl extends BaseUCServiceImpl<Aauser>  implements AAAWeb
         HttpSession httpSession=request.getSession();
         if (!(null == httpSession))
            httpSession.setAttribute("AccessList", roleAccessList);
+
     }//////////////  end of LOGIN
 }

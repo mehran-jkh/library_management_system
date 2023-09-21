@@ -1,5 +1,6 @@
 package com.example.lib_management.controller;
 
+import com.example.lib_management.AAA.Entity.Aaaccesslist;
 import com.example.lib_management.AAA.ServiceInterface.RoleWebService;
 import com.example.lib_management.AAA.commons.exceptions.mException;
 
@@ -11,6 +12,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 @RequestMapping("rolecontroller")
@@ -25,9 +30,22 @@ public class Roleservice_controller {
 
 //////////////////////////////////////////////////////////////////////////// Add Role
     @RequestMapping(value = "addrole",method = RequestMethod.GET)
-    public String add_role_page(@ModelAttribute ("role_key") RoleinfoDTO roleinfoDTO ) throws mException {
+    public String add_role_page(@ModelAttribute ("role_key") RoleinfoDTO roleinfoDTO , HttpServletRequest request) throws mException {
 
-        return "add_role";
+        // checking if this page is accessable or not
+        HttpSession httpSession= request.getSession(false);
+        if(httpSession==null)
+            return "redirect:/logincontroller/login";
+
+        List<Aaaccesslist> aaaccesslists = (List<Aaaccesslist>) httpSession.getAttribute("AccessList");
+
+        for (Aaaccesslist aaaccesslist:aaaccesslists)
+        {
+            if (aaaccesslist.getAapage().getUrl().equals("http://localhost:8080/rolecontroller/addrole"))
+                return "add_role";
+        }
+
+        return "redirect:/logincontroller/login";
     }
 
     @RequestMapping(value = "submit_addrole_form")
