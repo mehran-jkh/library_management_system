@@ -15,18 +15,8 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 @Service
 public class AAAServiceImpl extends BaseUCServiceImpl<Aauser>  implements AAAWebService {
-//    @Autowired
-//    HttpServletRequest request;
-//
-//    public HttpServletRequest getRequest() {
-//        return request;
-//    }
-//
-//
-//    public void setRequest(HttpServletRequest request) {
-//        this.request = request;
-//    }
 
+    //////////////////////////////////////////////////////////////////// Login Method
     @Override
     public void Login(LogininfoDTO logininfoDTO,HttpServletRequest request) throws Exception, mException {
         Session session=sessionFactory.openSession();
@@ -49,9 +39,12 @@ public class AAAServiceImpl extends BaseUCServiceImpl<Aauser>  implements AAAWeb
         List<Aaaccesslist> roleAccessList = (List<Aaaccesslist>) session.createNamedQuery("Aaaccesslist.findRoleAccessList")
                 .setParameter("RoleId", user.getAarole().getId()).getResultList();
 
-        HttpSession httpSession=request.getSession();
-        if (!(null == httpSession))
-           httpSession.setAttribute("AccessList", roleAccessList);
+        HttpSession httpSession=request.getSession(true);
+
+        httpSession.setAttribute("AccessList", roleAccessList);
 
     }//////////////  end of LOGIN
+
+
+    ////////////////////////////////////////////////////////////////////
 }
