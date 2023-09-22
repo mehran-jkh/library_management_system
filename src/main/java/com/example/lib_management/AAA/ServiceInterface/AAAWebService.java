@@ -8,4 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 
 public interface AAAWebService {
     public void Login(LogininfoDTO logininfoDTO, HttpServletRequest request) throws Exception, mException;
+
+
+
 }
