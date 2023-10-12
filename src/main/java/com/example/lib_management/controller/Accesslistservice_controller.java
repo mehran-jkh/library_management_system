@@ -62,7 +62,6 @@ public class Accesslistservice_controller {
         return "view_all_accesslists";
     }
 
-
     @RequestMapping(value = "submit_add_accesslist_form",method = RequestMethod.POST)
     public String submit_add_accesslist_form(AccesslistDTO accesslistDTO) throws mException
     {

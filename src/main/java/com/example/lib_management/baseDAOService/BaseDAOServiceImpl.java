@@ -1,6 +1,5 @@
-package com.example.lib_management.baseService;
+package com.example.lib_management.baseDAOService;
 
-import com.example.lib_management.AAA.Entity.Aarole;
 import com.example.lib_management.AAA.commons.exceptions.mException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -15,28 +14,20 @@ import java.util.List;
 
 @Service
 
-public class BaseUCServiceImpl<T> implements BaseUCService<T> {
+public class BaseDAOServiceImpl<T> implements BaseDAOService<T> {
     protected SessionFactory sessionFactory;
 
     private Class<T> Classtype;
     private String ClassName;
 
-    public BaseUCServiceImpl(Class<T> type)
+    public BaseDAOServiceImpl(Class<T> type)
     {
         this.Classtype = type;
         ClassName = Classtype.getSimpleName();
     }
 
-    public BaseUCServiceImpl (){}
+    public BaseDAOServiceImpl(){}
 
-//    public BaseUCServiceImpl(SessionFactory sessionFactory){
-//        System.out.println("inside constructor...");
-//        this.sessionFactory=sessionFactory;
-//        if (this.sessionFactory==null)
-//            System.out.println("null value...");
-//        else
-//            System.out.println("not null value...");
-//    }
 
 
 
@@ -55,10 +46,7 @@ public class BaseUCServiceImpl<T> implements BaseUCService<T> {
     {
         System.out.println("entering Add method...!!!");
         Session session=sessionFactory.openSession();
-        if(session==null)
-            System.out.println("nullllll...");
-        else
-            System.out.println("not nulllllll .....");
+
         session.save(entity);
 
         return "the "+this.ClassName+ " has been added successfully (without exception handling...!!!";

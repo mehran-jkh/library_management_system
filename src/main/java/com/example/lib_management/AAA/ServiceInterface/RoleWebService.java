@@ -3,11 +3,11 @@ package com.example.lib_management.AAA.ServiceInterface;
 import com.example.lib_management.AAA.Entity.Aarole;
 import com.example.lib_management.AAA.commons.exceptions.mException;
 import com.example.lib_management.AAA.model.RoleinfoDTO;
-import com.example.lib_management.baseService.BaseUCService;
+import com.example.lib_management.baseDAOService.BaseDAOService;
 
 import java.util.List;
 
-public interface RoleWebService extends BaseUCService<Aarole> {
+public interface RoleWebService extends BaseDAOService<Aarole> {
 
     public List<RoleinfoDTO> return_all_roles();
 

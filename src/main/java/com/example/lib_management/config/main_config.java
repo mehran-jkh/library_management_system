@@ -24,7 +24,7 @@ import org.springframework.web.servlet.view.JstlView;
 @Configuration
 @EnableWebMvc
 @ComponentScan(
-        basePackages = {"com.example.lib_management.controller", "com.example.lib_management.AAA.ServiceImpl", "com.example.lib_management.baseService"}
+        basePackages = {"com.example.lib_management.controller", "com.example.lib_management.AAA.ServiceImpl", "com.example.lib_management.baseDAOService"}
 )
 @EnableTransactionManagement
 public class main_config {

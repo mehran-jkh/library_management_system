@@ -4,15 +4,14 @@ import com.example.lib_management.AAA.Entity.Aapage;
 import com.example.lib_management.AAA.ServiceInterface.PageWebService;
 import com.example.lib_management.AAA.commons.exceptions.mException;
 import com.example.lib_management.AAA.model.PageinfoDTO;
-import com.example.lib_management.AAA.model.RoleinfoDTO;
-import com.example.lib_management.baseService.BaseUCServiceImpl;
+import com.example.lib_management.baseDAOService.BaseDAOServiceImpl;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class PageServiceImpl extends BaseUCServiceImpl<Aapage> implements PageWebService {
+public class PageServiceImpl extends BaseDAOServiceImpl<Aapage> implements PageWebService {
 
 
     public PageServiceImpl() {

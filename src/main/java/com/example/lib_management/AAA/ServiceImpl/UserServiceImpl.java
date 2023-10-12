@@ -2,15 +2,15 @@ package com.example.lib_management.AAA.ServiceImpl;
 
 import com.example.lib_management.AAA.Entity.Aauser;
 import com.example.lib_management.AAA.ServiceInterface.UserWebService;
-import com.example.lib_management.baseService.BaseUCServiceImpl;
 import com.example.lib_management.AAA.commons.exceptions.mException;
+import com.example.lib_management.baseDAOService.BaseDAOServiceImpl;
 import org.hibernate.Session;
 
 
 import javax.transaction.Transactional;
 import java.util.List;
 //@Service
-public class UserServiceImpl extends BaseUCServiceImpl<Aauser> implements UserWebService
+public class UserServiceImpl extends BaseDAOServiceImpl<Aauser> implements UserWebService
 {
     public UserServiceImpl(Class<Aauser> type)
     {

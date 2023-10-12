@@ -4,14 +4,13 @@ import com.example.lib_management.AAA.Entity.Aarole;
 import com.example.lib_management.AAA.ServiceInterface.RoleWebService;
 import com.example.lib_management.AAA.commons.exceptions.mException;
 import com.example.lib_management.AAA.model.RoleinfoDTO;
-import com.example.lib_management.baseService.BaseUCServiceImpl;
-import org.hibernate.Session;
+import com.example.lib_management.baseDAOService.BaseDAOServiceImpl;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
 @Service
-public class RoleServiceImpl extends BaseUCServiceImpl<Aarole> implements RoleWebService {
+public class RoleServiceImpl extends BaseDAOServiceImpl<Aarole> implements RoleWebService {
 
 
     public RoleServiceImpl() {

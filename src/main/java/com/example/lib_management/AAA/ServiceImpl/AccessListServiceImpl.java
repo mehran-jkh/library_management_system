@@ -4,21 +4,17 @@ import com.example.lib_management.AAA.Entity.Aaaccesslist;
 import com.example.lib_management.AAA.Entity.Aapage;
 import com.example.lib_management.AAA.Entity.Aarole;
 import com.example.lib_management.AAA.ServiceInterface.AccesslistWebService;
-import com.example.lib_management.AAA.model.AccesslistDTO;
-import com.example.lib_management.AAA.model.PageinfoDTO;
-import com.example.lib_management.baseService.BaseUCServiceImpl;
 import com.example.lib_management.AAA.commons.exceptions.mException;
+import com.example.lib_management.baseDAOService.BaseDAOServiceImpl;
 import org.hibernate.Session;
 import org.springframework.stereotype.Service;
 
 
-import javax.transaction.Transactional;
-import java.util.ArrayList;
 import java.util.List;
 
 //import org.springframework.transaction.annotation.Transactional;
 @Service
-public class AccessListServiceImpl extends BaseUCServiceImpl<Aaaccesslist> implements AccesslistWebService {
+public class AccessListServiceImpl extends BaseDAOServiceImpl<Aaaccesslist> implements AccesslistWebService {
 
 
 
