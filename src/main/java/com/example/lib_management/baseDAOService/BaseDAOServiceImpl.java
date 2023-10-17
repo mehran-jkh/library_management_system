@@ -5,7 +5,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,20 +12,20 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-
 public class BaseDAOServiceImpl<T> implements BaseDAOService<T> {
     protected SessionFactory sessionFactory;
 
     private Class<T> Classtype;
     private String ClassName;
 
-    public BaseDAOServiceImpl(Class<T> type)
-    {
-        this.Classtype = type;
-        ClassName = Classtype.getSimpleName();
+
+    public BaseDAOServiceImpl() {
     }
 
-    public BaseDAOServiceImpl(){}
+    public void set_class_info(Class<T> clazz) {
+        this.Classtype = clazz;
+        this.ClassName = clazz.getSimpleName();
+    }
 
 
 
@@ -41,21 +40,18 @@ public class BaseDAOServiceImpl<T> implements BaseDAOService<T> {
     }
 
     @Override
-  //  @Transactional
-    public String Add(T entity)  throws mException
-    {
-        System.out.println("entering Add method...!!!");
-        Session session=sessionFactory.openSession();
+    public String Add(T entity) throws mException {
+        Session session = sessionFactory.openSession();
 
         session.save(entity);
 
-        return "the "+this.ClassName+ " has been added successfully (without exception handling...!!!";
+        return "the " + this.ClassName + " has been added successfully (without exception handling...!!!";
     }
 
     ///////////////////////////////////////////////////////////
     @Override
     public T Edit(T entity) {
-        Session session=sessionFactory.openSession();
+        Session session = sessionFactory.openSession();
 
         session.getTransaction().begin();
         session.update(entity);
@@ -63,6 +59,7 @@ public class BaseDAOServiceImpl<T> implements BaseDAOService<T> {
 
         return entity;
     }
+
     /////////////////////////////////////////////////////////// REMOVE
     @Override
     public void Remove(T entity) {
@@ -72,14 +69,13 @@ public class BaseDAOServiceImpl<T> implements BaseDAOService<T> {
     @Override
     @Transactional
 
-    public void Remove(int id)
-    {
-        System.out.println("inside Reomove method with id: "+id);
-        Session session=sessionFactory.openSession();
+    public void Remove(int id) {
+
+        Session session = sessionFactory.openSession();
 
         session.getTransaction().begin();
 
-        Query query= session.createQuery("delete from "+ClassName+" e  where e.id="+id);
+        Query query = session.createQuery("delete from " + ClassName + " e  where e.id=" + id);
         query.executeUpdate();
 
         session.getTransaction().commit();
@@ -88,11 +84,10 @@ public class BaseDAOServiceImpl<T> implements BaseDAOService<T> {
     ///////////////////////////////////////////////////////////
 
 
-
     ///////////////////////////////////////////////////////////
     @Override
     public List<T> FindAll() {
-        Session session=sessionFactory.openSession();
+        Session session = sessionFactory.openSession();
 
         Query query = session.createQuery("SELECT e FROM " + ClassName + " e");
         return (List<T>) query.getResultList();
@@ -100,11 +95,11 @@ public class BaseDAOServiceImpl<T> implements BaseDAOService<T> {
 
     @Override
     public T FindbyId(int id) {
-        Session session=sessionFactory.openSession();
+        Session session = sessionFactory.openSession();
         session.getTransaction().begin();
 
-        Query query= session.createQuery("select e from "+ClassName+" e  where e.id="+id);
-        List<T> list=query.list();
+        Query query = session.createQuery("select e from " + ClassName + " e  where e.id=" + id);
+        List<T> list = query.list();
 
         session.getTransaction().commit();
 
@@ -112,10 +107,10 @@ public class BaseDAOServiceImpl<T> implements BaseDAOService<T> {
     }
 
     @Override
-    public List<T> FindbyField(String fieldname , String operation , Object fieldvalue) {
-        Session session=sessionFactory.openSession();
-        List<T> list=session.createQuery("SELECT e FROM " + ClassName + " e WHERE e." + fieldname + operation + ":FieldValue")
-                .setParameter("FieldValue",fieldvalue).getResultList();
+    public List<T> FindbyField(String fieldname, String operation, Object fieldvalue) {
+        Session session = sessionFactory.openSession();
+        List<T> list = session.createQuery("SELECT e FROM " + ClassName + " e WHERE e." + fieldname + operation + ":FieldValue")
+                .setParameter("FieldValue", fieldvalue).getResultList();
 
 
         return list;

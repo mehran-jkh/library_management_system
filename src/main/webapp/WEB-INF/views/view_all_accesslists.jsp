@@ -17,13 +17,13 @@
 <%--    ///////////////////////////////////////////////////////   role selecting     --%>
     <form:select path="role_id" onchange="change_role(this.value)">
         <c:forEach items="${role_list_key}" var="role">
-           <form:option value="${role.code}" label="${role.name}"></form:option>
+           <form:option value="${role.id}" label="${role.name}"></form:option>
         </c:forEach>
     </form:select>
 <%--    ///////////////////////////////////////////////////////   page selecting     --%> <br>
 
     <c:forEach items="${page_list_key}" var="page">
-        <form:checkbox path="pages_id" value="${page.code}" label="${page.name}"  />  <br>
+        <form:checkbox path="pages_id" value="${page.id}" label="${page.name}"  />  <br>
     </c:forEach>
 
 

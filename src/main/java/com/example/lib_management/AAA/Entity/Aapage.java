@@ -16,11 +16,13 @@ public class Aapage {
     private String name;
     private String pagename;
     private String url;
+
+
     public Aapage(PageinfoDTO pageinfoDTO){
         this.setUrl(pageinfoDTO.getUrl());
         this.name=pageinfoDTO.getName();
         this.description=pageinfoDTO.getDescription();
-        this.id=pageinfoDTO.getCode();
+        this.id=pageinfoDTO.getId();
     }
     public Aapage(){}
 

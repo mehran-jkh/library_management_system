@@ -8,7 +8,7 @@ public class RoleinfoDTO {
     private String name;
     private String description;
     private Integer maxuser;
-    private int code;
+    private int id;
 
 
     public RoleinfoDTO(Aarole aarole)
@@ -16,16 +16,16 @@ public class RoleinfoDTO {
         this.name=aarole.getName();
         this.maxuser=aarole.getMaxuser();
         this.description=aarole.getDescription();
-        this.code=aarole.getId();
+        this.id=aarole.getId();
     }
     public RoleinfoDTO(){}
 
-    public int getCode() {
-        return code;
+    public int getId() {
+        return id;
     }
 
-    public void setCode(int code) {
-        this.code = code;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Integer getMaxuser() {

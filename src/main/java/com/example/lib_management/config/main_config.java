@@ -8,9 +8,11 @@ package com.example.lib_management.config;
 import java.util.Properties;
 import javax.sql.DataSource;
 import org.hibernate.SessionFactory;
+import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
@@ -24,7 +26,13 @@ import org.springframework.web.servlet.view.JstlView;
 @Configuration
 @EnableWebMvc
 @ComponentScan(
-        basePackages = {"com.example.lib_management.controller", "com.example.lib_management.AAA.ServiceImpl", "com.example.lib_management.baseDAOService"}
+        basePackages =
+                {
+                "com.example.lib_management.controller",
+                "com.example.lib_management.AAA.ServiceImpl",
+                "com.example.lib_management.baseDAOService",
+                "com.example.lib_management.baseDTOServices"
+                }
 )
 @EnableTransactionManagement
 public class main_config {
@@ -72,5 +80,11 @@ public class main_config {
         SessionFactory sessionFactory = this.sessionFactoryBean().getObject();
         hibernateTransactionManager.setSessionFactory(sessionFactory);
         return hibernateTransactionManager;
+    }
+    @Bean
+    @Scope("prototype")
+    public ModelMapper modelMapper()
+    {
+        return new ModelMapper();
     }
 }

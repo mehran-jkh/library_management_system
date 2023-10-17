@@ -32,50 +32,50 @@ public class Roleservice_controller {
 
     @RequestMapping(value = "submit_addrole_form")
     public String add_role_submit(RoleinfoDTO roleinfoDTO) throws mException {
-      String message=  roleService.add_role(roleinfoDTO);
+      String message=  roleService.add_model(roleinfoDTO);
       System.out.println(message);
 
-      return "redirect:/rolecontroller/viewallroles";
+      return "redirect:/rolecontroller/addrole";
     }
 //////////////////////////////////////////////////////////////////////////// Show All Roles
 
-    @RequestMapping(value = "viewallroles", method = RequestMethod.GET)
-    public String roles_info_page(Model model)
-    {
-        System.out.println("entering viewallroles...");
-        model.addAttribute("roles_list_key", roleService.return_all_roles());
-
-        return "view_all_roles";
-    }
-//////////////////////////////////////////////////////////////////////////// Delete Role
-
-    @RequestMapping(value = "deleterole/{code}",method = RequestMethod.GET)
-    public String delete_role(@PathVariable int code){
-        System.out.println("inside delete method with code:"+code);
-        roleService.Remove(code);
-
-
-        return "redirect:/rolecontroller/viewallroles";
-    }
-//////////////////////////////////////////////////////////////////////////// Edit Role
-
-    @RequestMapping(value = "editrole/{code}" ,method = RequestMethod.GET)
-    public String show_edit_role_form(@PathVariable int code,Model model){
-        RoleinfoDTO roleinfoDTO=roleService.return_roel_by_id(code);
-        model.addAttribute("role_key",roleinfoDTO);
-
-        return "edit_role";
-    }
-
-
-    @RequestMapping(value ="submit_edit_role/submit_edit_page",method = RequestMethod.POST)
-    public String submit_edit_role_form(RoleinfoDTO roleinfoDTO){
-        String message=  roleService.update_role(roleinfoDTO);
-        System.out.println(message);
-
-
-        return "redirect:/rolecontroller/viewallroles";
-    }
+//    @RequestMapping(value = "viewallroles", method = RequestMethod.GET)
+//    public String roles_info_page(Model model)
+//    {
+//        System.out.println("entering viewallroles...");
+//        model.addAttribute("roles_list_key", roleService.return_all_roles());
+//
+//        return "view_all_roles";
+//    }
+////////////////////////////////////////////////////////////////////////////// Delete Role
+//
+//    @RequestMapping(value = "deleterole/{code}",method = RequestMethod.GET)
+//    public String delete_role(@PathVariable int code){
+//        System.out.println("inside delete method with code:"+code);
+//        roleService.Remove(code);
+//
+//
+//        return "redirect:/rolecontroller/viewallroles";
+//    }
+////////////////////////////////////////////////////////////////////////////// Edit Role
+//
+//    @RequestMapping(value = "editrole/{code}" ,method = RequestMethod.GET)
+//    public String show_edit_role_form(@PathVariable int code,Model model){
+//        RoleinfoDTO roleinfoDTO=roleService.return_roel_by_id(code);
+//        model.addAttribute("role_key",roleinfoDTO);
+//
+//        return "edit_role";
+//    }
+//
+//
+//    @RequestMapping(value ="submit_edit_role/submit_edit_page",method = RequestMethod.POST)
+//    public String submit_edit_role_form(RoleinfoDTO roleinfoDTO){
+//        String message=  roleService.update_role(roleinfoDTO);
+//        System.out.println(message);
+//
+//
+//        return "redirect:/rolecontroller/viewallroles";
+//    }
 
 //////////////////////////////////////////////////////////////////////////// Edit Role
 

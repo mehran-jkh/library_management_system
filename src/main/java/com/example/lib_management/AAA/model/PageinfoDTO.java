@@ -4,17 +4,13 @@ package com.example.lib_management.AAA.model;
 
 
 import com.example.lib_management.AAA.Entity.Aapage;
-import com.example.lib_management.AAA.Entity.Aarole;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 
 public class PageinfoDTO {
 
-    private int code;
-
-
-
+    private int id;
 
     @NotEmpty
     private String name;
@@ -27,7 +23,7 @@ public class PageinfoDTO {
 
     public PageinfoDTO(Aapage aapage)
     {
-        this.code=aapage.getId();
+        this.id =aapage.getId();
         this.name=aapage.getName();
         this.description=aapage.getDescription();
         this.url=aapage.getUrl();
@@ -57,11 +53,11 @@ public class PageinfoDTO {
     public void setUrl(String url) {
         this.url = url;
     }
-    public int getCode() {
-        return code;
+    public int getId() {
+        return id;
     }
 
-    public void setCode(int code) {
-        this.code = code;
+    public void setId(int id) {
+        this.id = id;
     }
 }

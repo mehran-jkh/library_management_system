@@ -21,7 +21,7 @@ public class Aarole {
         this.name= roleinfoDTO.getName();
         this.maxuser= roleinfoDTO.getMaxuser();
         this.description= roleinfoDTO.getDescription();
-        this.id=roleinfoDTO.getCode();
+        this.id=roleinfoDTO.getId();
     }
     public Aarole(){}
 
