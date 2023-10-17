@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3cf00271-3247-4956-8619-9dfd258f5f92" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/AAA/ServiceImpl/AccessListServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/AAA/ServiceImpl/AccessListServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AAA/ServiceImpl/PageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/AAA/ServiceImpl/PageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AAA/ServiceImpl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/AAA/ServiceImpl/RoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AAA/ServiceImpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/AAA/ServiceImpl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AAA/ServiceInterface/AccesslistWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AAA/ServiceInterface/AccesslistWebService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AAA/ServiceInterface/PageWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AAA/ServiceInterface/PageWebService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AAA/ServiceInterface/RoleWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AAA/ServiceInterface/RoleWebService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AAA/ServiceInterface/UserWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AAA/ServiceInterface/UserWebService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AAA/model/RoleinfoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/AAA/model/RoleinfoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main_Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baseService/BaseUCService.java" beforeDir="false" afterPath="$PROJECT_DIR$/baseService/BaseUCService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baseService/BaseUCServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/baseService/BaseUCServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/main_config.java" beforeDir="false" afterPath="$PROJECT_DIR$/config/main_config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/Accesslistservice_controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Accesslistservice_controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/Pageservice_controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Pageservice_controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/Roleservice_controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Roleservice_controller.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2WfOj5HHzCm7PJWNrtLcPdT69CB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3cf00271-3247-4956-8619-9dfd258f5f92" name="Changes" comment="" />
+      <created>1697120307521</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697120307521</updated>
+      <workItem from="1697120315021" duration="386000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
