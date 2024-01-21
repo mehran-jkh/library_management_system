@@ -1,0 +1,23 @@
+adding Sessionmanager-class later
+
+studing bean life-cycle and its annotations later ...
+
+it seems to this method of securing end-points is very pussy-poem because some of the actions does not have
+simply a page... (one approuch is to treat those end-points like a page  and store them in db)
+
+
+later resuming  searching about internal work-flow of mvc and webmvc configurer interface .
+
+what is javax ??
+
+--->> configuring the model-mapper tomorrow
+--->> research about scope=request,session // in the video on youtube
+--->> research about groups and payload parameter in annotations... // it is not so important
+--->> trimming the app later after implementing main parts of the project
+--->> adding log4j for example in some places for example in initbinder methods ...
+--->> adding global error to binding result and displaying them in jsp page...
+--->> <spring:hasBinderror /> tag and generally <spring:> tag in jsp
+--->> the Find byID method is subject to error because the id may not exist...
+--->> probably we can subsituate the hashmaps with enum for searchfields and other purposes...
+
+vnols
